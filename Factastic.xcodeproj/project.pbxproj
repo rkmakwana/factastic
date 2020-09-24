@@ -25,6 +25,7 @@
 		707DC790251CE886004049F0 /* FeedsUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC78F251CE886004049F0 /* FeedsUseCases.swift */; };
 		707DC792251CE898004049F0 /* FeedsUseCasesImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC791251CE898004049F0 /* FeedsUseCasesImplementation.swift */; };
 		707DC794251CEA75004049F0 /* FeedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC793251CEA75004049F0 /* FeedsView.swift */; };
+		70B4CB07251CFCEA00C4D109 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB06251CFCEA00C4D109 /* CachedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		707DC78F251CE886004049F0 /* FeedsUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsUseCases.swift; sourceTree = "<group>"; };
 		707DC791251CE898004049F0 /* FeedsUseCasesImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsUseCasesImplementation.swift; sourceTree = "<group>"; };
 		707DC793251CEA75004049F0 /* FeedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsView.swift; sourceTree = "<group>"; };
+		70B4CB06251CFCEA00C4D109 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				705C0226251BE4CD0006AE0F /* App */,
 				707DC784251CE706004049F0 /* NetworkRequests */,
 				707DC781251CE619004049F0 /* NetworkClient */,
+				70B4CB05251CFCD200C4D109 /* Utilities */,
 				707DC77E251CE5E6004049F0 /* Models */,
 				705C0227251BE4D90006AE0F /* Resources */,
 				707DC779251CE1CA004049F0 /* TableViewCells */,
@@ -191,6 +194,14 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		70B4CB05251CFCD200C4D109 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				70B4CB06251CFCEA00C4D109 /* CachedImageView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +279,7 @@
 				707DC77B251CE1EE004049F0 /* FeedsTableViewCell.swift in Sources */,
 				707DC77D251CE21D004049F0 /* FeedsTableCellUILayout.swift in Sources */,
 				705C022C251BE51E0006AE0F /* FeedsViewUILayout.swift in Sources */,
+				70B4CB07251CFCEA00C4D109 /* CachedImageView.swift in Sources */,
 				707DC790251CE886004049F0 /* FeedsUseCases.swift in Sources */,
 				707DC792251CE898004049F0 /* FeedsUseCasesImplementation.swift in Sources */,
 				707DC78B251CE828004049F0 /* FeedsViewModel.swift in Sources */,

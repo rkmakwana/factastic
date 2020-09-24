@@ -14,9 +14,8 @@ protocol FeedsCellView {
 
 class FeedsTableViewCell: UITableViewCell {
     
-    let topicImageView: UIImageView = {
-        let img = UIImageView()
-        img.backgroundColor = .systemPink
+    let topicImageView: CachedImageView = {
+        let img = CachedImageView()
         img.contentMode = .scaleAspectFill
         img.translatesAutoresizingMaskIntoConstraints = false
         img.layer.cornerRadius = 8
@@ -63,6 +62,17 @@ extension FeedsTableViewCell: FeedsCellView {
     func configure(with feed: Feed) {
         self.topicTitleLabel.text = feed.topic
         self.topicDetailsLabel.text = feed.detail
+        
+        self.topicImageView.image = nil
+        self.topicImageView.backgroundColor = .systemPink
+        if let imgURL = URL(string: feed.imageHref ?? "") {
+            self.topicImageView.setImage(url: imgURL) { success in
+                if success {
+                    self.topicImageView.backgroundColor = .clear
+                }
+            }
+            
+        }
     }
     
 }

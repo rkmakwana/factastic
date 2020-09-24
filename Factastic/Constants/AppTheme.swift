@@ -16,5 +16,5 @@ public enum AppColors {
 
 public enum AppFonts {
     static let title = UIFont.systemFont(ofSize: 22.0)
-    static let subtitle = UIFont.systemFont(ofSize: 18.0)
+    static let subtitle = UIFont.systemFont(ofSize: 16.0)
 }

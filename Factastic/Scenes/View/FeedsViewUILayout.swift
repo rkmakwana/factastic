@@ -60,17 +60,19 @@ extension FeedsViewController {
     }
     
     func setupRefreshControl() {
-        refreshControl.attributedTitle = NSAttributedString(string: "Refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
     }
     
     func setupLoader() {
-        loader = UIActivityIndicatorView(style: .medium)
+        if #available(iOS 13.0, *) {
+            loader = UIActivityIndicatorView(style: .large)
+        } else {
+            loader = UIActivityIndicatorView(style: .gray)
+        }
         loader.center = self.view.center
         loader.hidesWhenStopped = true
-        loader.backgroundColor = .black
-        loader.color = .white
         view.addSubview(loader)
     }
     
