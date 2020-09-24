@@ -26,7 +26,23 @@
 		707DC792251CE898004049F0 /* FeedsUseCasesImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC791251CE898004049F0 /* FeedsUseCasesImplementation.swift */; };
 		707DC794251CEA75004049F0 /* FeedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC793251CEA75004049F0 /* FeedsView.swift */; };
 		70B4CB07251CFCEA00C4D109 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB06251CFCEA00C4D109 /* CachedImageView.swift */; };
+		70B4CB1F251D271700C4D109 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB17251D271700C4D109 /* Error.swift */; };
+		70B4CB20251D271700C4D109 /* FeedsUseCasesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB19251D271700C4D109 /* FeedsUseCasesMock.swift */; };
+		70B4CB21251D271700C4D109 /* FeedsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB1A251D271700C4D109 /* FeedsViewMock.swift */; };
+		70B4CB22251D271700C4D109 /* FeedsTableCellMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB1B251D271700C4D109 /* FeedsTableCellMock.swift */; };
+		70B4CB23251D271700C4D109 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB1C251D271700C4D109 /* Feed.swift */; };
+		70B4CB24251D271700C4D109 /* FeedsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4CB1E251D271700C4D109 /* FeedsViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70B4CB11251D26ED00C4D109 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705C0207251BE1A70006AE0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705C020E251BE1A70006AE0F;
+			remoteInfo = Factastic;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		705C020F251BE1A70006AE0F /* Factastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,10 +66,25 @@
 		707DC791251CE898004049F0 /* FeedsUseCasesImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsUseCasesImplementation.swift; sourceTree = "<group>"; };
 		707DC793251CEA75004049F0 /* FeedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsView.swift; sourceTree = "<group>"; };
 		70B4CB06251CFCEA00C4D109 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		70B4CB0C251D26ED00C4D109 /* FactasticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactasticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B4CB10251D26ED00C4D109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B4CB17251D271700C4D109 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		70B4CB19251D271700C4D109 /* FeedsUseCasesMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsUseCasesMock.swift; sourceTree = "<group>"; };
+		70B4CB1A251D271700C4D109 /* FeedsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewMock.swift; sourceTree = "<group>"; };
+		70B4CB1B251D271700C4D109 /* FeedsTableCellMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsTableCellMock.swift; sourceTree = "<group>"; };
+		70B4CB1C251D271700C4D109 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		70B4CB1E251D271700C4D109 /* FeedsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		705C020C251BE1A70006AE0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B4CB09251D26ED00C4D109 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				705C0211251BE1A70006AE0F /* Factastic */,
+				70B4CB0D251D26ED00C4D109 /* FactasticTests */,
 				705C0210251BE1A70006AE0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				705C020F251BE1A70006AE0F /* Factastic.app */,
+				70B4CB0C251D26ED00C4D109 /* FactasticTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +235,44 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		70B4CB0D251D26ED00C4D109 /* FactasticTests */ = {
+			isa = PBXGroup;
+			children = (
+				70B4CB16251D271700C4D109 /* Helpers */,
+				70B4CB1D251D271700C4D109 /* Tests */,
+				70B4CB10251D26ED00C4D109 /* Info.plist */,
+			);
+			path = FactasticTests;
+			sourceTree = "<group>";
+		};
+		70B4CB16251D271700C4D109 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				70B4CB17251D271700C4D109 /* Error.swift */,
+				70B4CB18251D271700C4D109 /* FeedsListing */,
+				70B4CB1C251D271700C4D109 /* Feed.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		70B4CB18251D271700C4D109 /* FeedsListing */ = {
+			isa = PBXGroup;
+			children = (
+				70B4CB19251D271700C4D109 /* FeedsUseCasesMock.swift */,
+				70B4CB1A251D271700C4D109 /* FeedsViewMock.swift */,
+				70B4CB1B251D271700C4D109 /* FeedsTableCellMock.swift */,
+			);
+			path = FeedsListing;
+			sourceTree = "<group>";
+		};
+		70B4CB1D251D271700C4D109 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				70B4CB1E251D271700C4D109 /* FeedsViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +293,24 @@
 			productReference = 705C020F251BE1A70006AE0F /* Factastic.app */;
 			productType = "com.apple.product-type.application";
 		};
+		70B4CB0B251D26ED00C4D109 /* FactasticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70B4CB13251D26ED00C4D109 /* Build configuration list for PBXNativeTarget "FactasticTests" */;
+			buildPhases = (
+				70B4CB08251D26ED00C4D109 /* Sources */,
+				70B4CB09251D26ED00C4D109 /* Frameworks */,
+				70B4CB0A251D26ED00C4D109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70B4CB12251D26ED00C4D109 /* PBXTargetDependency */,
+			);
+			name = FactasticTests;
+			productName = FactasticTests;
+			productReference = 70B4CB0C251D26ED00C4D109 /* FactasticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +323,10 @@
 				TargetAttributes = {
 					705C020E251BE1A70006AE0F = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					70B4CB0B251D26ED00C4D109 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 705C020E251BE1A70006AE0F;
 					};
 				};
 			};
@@ -251,6 +344,7 @@
 			projectRoot = "";
 			targets = (
 				705C020E251BE1A70006AE0F /* Factastic */,
+				70B4CB0B251D26ED00C4D109 /* FactasticTests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +357,13 @@
 				705C0231251BE65C0006AE0F /* Colors.xcassets in Resources */,
 				705C021F251BE1AA0006AE0F /* LaunchScreen.storyboard in Resources */,
 				705C021C251BE1AA0006AE0F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B4CB0A251D26ED00C4D109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +393,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70B4CB08251D26ED00C4D109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B4CB24251D271700C4D109 /* FeedsViewModelTests.swift in Sources */,
+				70B4CB22251D271700C4D109 /* FeedsTableCellMock.swift in Sources */,
+				70B4CB23251D271700C4D109 /* Feed.swift in Sources */,
+				70B4CB1F251D271700C4D109 /* Error.swift in Sources */,
+				70B4CB20251D271700C4D109 /* FeedsUseCasesMock.swift in Sources */,
+				70B4CB21251D271700C4D109 /* FeedsViewMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70B4CB12251D26ED00C4D109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705C020E251BE1A70006AE0F /* Factastic */;
+			targetProxy = 70B4CB11251D26ED00C4D109 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		705C021D251BE1AA0006AE0F /* LaunchScreen.storyboard */ = {
@@ -454,6 +576,44 @@
 			};
 			name = Release;
 		};
+		70B4CB14251D26ED00C4D109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FactasticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainforked.FactasticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Factastic.app/Factastic";
+			};
+			name = Debug;
+		};
+		70B4CB15251D26ED00C4D109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FactasticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brainforked.FactasticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Factastic.app/Factastic";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,6 +631,15 @@
 			buildConfigurations = (
 				705C0224251BE1AA0006AE0F /* Debug */,
 				705C0225251BE1AA0006AE0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70B4CB13251D26ED00C4D109 /* Build configuration list for PBXNativeTarget "FactasticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70B4CB14251D26ED00C4D109 /* Debug */,
+				70B4CB15251D26ED00C4D109 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

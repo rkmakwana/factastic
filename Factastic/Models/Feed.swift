@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Feed: Codable {
+struct Feed: Codable {
     private let title: String?
     private let description: String?
     

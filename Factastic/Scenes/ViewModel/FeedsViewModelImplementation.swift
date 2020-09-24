@@ -45,18 +45,11 @@ class FeedsViewModelImplementation: FeedsViewModel {
 extension FeedsViewModelImplementation {
     
     private func fetchFeeds() {
-        // Using seperate queue for network requests
-        DispatchQueue.global(qos: .userInitiated).async {
-            
-            // No need to execute on main thread as the completion handler
-            // is executed on main thread, specified in Network Client.
-            
-            self.useCases.fetchFeeds { [weak self] (resp, err) in
-                if let response = resp {
-                    self?.handleSuccess(title: response.title, feeds: response.rows)
-                } else if let error = err {
-                    self?.handleError(error: error)
-                }
+        self.useCases.fetchFeeds { [weak self] (resp, err) in
+            if let response = resp {
+                self?.handleSuccess(title: response.title, feeds: response.rows)
+            } else if let error = err {
+                self?.handleError(error: error)
             }
         }
     }
