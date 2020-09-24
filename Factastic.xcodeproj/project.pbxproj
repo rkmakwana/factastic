@@ -15,6 +15,8 @@
 		705C022F251BE55F0006AE0F /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C022E251BE55F0006AE0F /* AppTheme.swift */; };
 		705C0231251BE65C0006AE0F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705C0230251BE65C0006AE0F /* Colors.xcassets */; };
 		705C0233251BE7A80006AE0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C0232251BE7A80006AE0F /* Constants.swift */; };
+		707DC77B251CE1EE004049F0 /* FeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC77A251CE1EE004049F0 /* FeedsTableViewCell.swift */; };
+		707DC77D251CE21D004049F0 /* FeedsTableViewCellUILayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DC77C251CE21D004049F0 /* FeedsTableViewCellUILayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		705C022E251BE55F0006AE0F /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		705C0230251BE65C0006AE0F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		705C0232251BE7A80006AE0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		707DC77A251CE1EE004049F0 /* FeedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsTableViewCell.swift; sourceTree = "<group>"; };
+		707DC77C251CE21D004049F0 /* FeedsTableViewCellUILayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsTableViewCellUILayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			children = (
 				705C0226251BE4CD0006AE0F /* App */,
 				705C0227251BE4D90006AE0F /* Resources */,
+				707DC779251CE1CA004049F0 /* TableViewCells */,
 				705C0228251BE4F30006AE0F /* Scenes */,
 				705C022D251BE5480006AE0F /* Constants */,
 				705C0220251BE1AA0006AE0F /* Info.plist */,
@@ -103,6 +108,15 @@
 				705C0232251BE7A80006AE0F /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		707DC779251CE1CA004049F0 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				707DC77C251CE21D004049F0 /* FeedsTableViewCellUILayout.swift */,
+				707DC77A251CE1EE004049F0 /* FeedsTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				705C0233251BE7A80006AE0F /* Constants.swift in Sources */,
+				707DC77B251CE1EE004049F0 /* FeedsTableViewCell.swift in Sources */,
+				707DC77D251CE21D004049F0 /* FeedsTableViewCellUILayout.swift in Sources */,
 				705C022C251BE51E0006AE0F /* FeedsViewUILayout.swift in Sources */,
 				705C022F251BE55F0006AE0F /* AppTheme.swift in Sources */,
 				705C022A251BE5060006AE0F /* FeedsViewController.swift in Sources */,

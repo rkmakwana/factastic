@@ -14,16 +14,26 @@ extension FeedsViewController {
         super.loadView()
         view.backgroundColor = AppColors.primaryBackground
         safeArea = view.layoutMarginsGuide
+        title = AppConstants.title
         navigationBarAppearance()
         setupTableView()
     }
     
     func navigationBarAppearance() {
-        self.title = AppConstants.title
-        navigationController?.navigationBar.barTintColor = .systemGreen
-        navigationController?.navigationBar.tintColor = .white
-//        navigationController?.navigationBar.isTranslucent = false
-        navigationItem.title = title
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            navBarAppearance.backgroundColor = .systemGreen
+            navigationController?.navigationBar.standardAppearance = navBarAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        } else {
+            navigationController?.navigationBar.barTintColor = .systemGreen
+            navigationController?.navigationBar.tintColor = .white
+            navigationController?.navigationBar.isTranslucent = false
+            navigationItem.title = title
+        }
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -43,6 +53,6 @@ extension FeedsViewController {
         tableView.allowsSelection = false
         tableView.tableFooterView = UIView()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(FeedsTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
 }
