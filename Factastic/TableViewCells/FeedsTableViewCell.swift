@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FeedsCellView {
+    func configure(with feed: Feed)
+}
+
 class FeedsTableViewCell: UITableViewCell {
     
     let topicImageView: UIImageView = {
@@ -49,6 +53,16 @@ class FeedsTableViewCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+}
+
+// MARK:- FeedsCellView Protocol conformance
+extension FeedsTableViewCell: FeedsCellView {
+    
+    func configure(with feed: Feed) {
+        self.topicTitleLabel.text = feed.topic
+        self.topicDetailsLabel.text = feed.detail
     }
     
 }
