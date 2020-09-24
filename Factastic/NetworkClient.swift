@@ -45,7 +45,9 @@ class NetworkClient {
         }
         endpointRequest.httpMethod = "GET"
         
-        URLSession.shared.dataTask(
+        let configuration = URLSessionConfiguration.ephemeral
+        let session = URLSession(configuration: configuration)
+        session.dataTask(
             with: endpointRequest,
             completionHandler: { (data, urlResponse, error) in
                 DispatchQueue.main.async {

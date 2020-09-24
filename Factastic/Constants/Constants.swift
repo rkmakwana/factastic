@@ -14,6 +14,6 @@ public enum AppConstants {
     static let okayAction = "Okay"
 }
 
-public enum Endpoints {
-    static let fetchFeeds = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+public enum ImageAssets {
+    static let noResults = "noResults"
 }

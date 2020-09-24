@@ -41,7 +41,7 @@ class FeedsViewController: UIViewController {
     }
     
     @objc func retry(_ sender: Any?) {
-        viewModel.fetchList()
+        viewModel.reloadList()
     }
 
 }
@@ -71,7 +71,6 @@ extension FeedsViewController: FeedsView {
     
     func reloadTable() {
         tableView.reloadData()
-        refreshControl.endRefreshing()
     }
     
     func showAlert(title: String, message: String) {

@@ -60,19 +60,17 @@ extension FeedsViewController {
     }
     
     func setupRefreshControl() {
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.attributedTitle = NSAttributedString(string: "Refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
-        tableView.refreshControl = refreshControl
+        tableView.addSubview(refreshControl)
     }
     
     func setupLoader() {
-        if #available(iOS 13.0, *) {
-            loader = UIActivityIndicatorView(style: .large)
-        } else {
-            loader = UIActivityIndicatorView(style: .gray)
-        }
+        loader = UIActivityIndicatorView(style: .medium)
         loader.center = self.view.center
         loader.hidesWhenStopped = true
+        loader.backgroundColor = .black
+        loader.color = .white
         view.addSubview(loader)
     }
     
@@ -90,7 +88,7 @@ extension FeedsViewController {
         
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-//        imageView.image = UIImage(named: ImageNames.noRecords)
+        imageView.image = UIImage(named: ImageAssets.noResults)
         container.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         constraints = [
@@ -103,7 +101,7 @@ extension FeedsViewController {
         
         let label = UILabel()
         label.text = "No results found"
-//        label.font = 
+        label.font = AppFonts.title
         label.textColor = .systemPink
         container.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false

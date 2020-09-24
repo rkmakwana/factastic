@@ -30,12 +30,7 @@ class FeedsViewModelImplementation: FeedsViewModel {
         fetchFeeds()
     }
     
-    func fetchList() {
-        fetchFeeds()
-    }
-    
     func reloadList() {
-        view?.showLoader()
         fetchFeeds()
     }
     
@@ -50,11 +45,18 @@ class FeedsViewModelImplementation: FeedsViewModel {
 extension FeedsViewModelImplementation {
     
     private func fetchFeeds() {
-        useCases.fetchFeeds { (resp, err) in
-            if let response = resp {
-                self.handleSuccess(title: response.title, feeds: response.rows)
-            } else if let error = err {
-                self.handleError(error: error)
+        // Using seperate queue for network requests
+        DispatchQueue.global(qos: .userInitiated).async {
+            
+            // No need to execute on main thread as the completion handler
+            // is executed on main thread, specified in Network Client.
+            
+            self.useCases.fetchFeeds { [weak self] (resp, err) in
+                if let response = resp {
+                    self?.handleSuccess(title: response.title, feeds: response.rows)
+                } else if let error = err {
+                    self?.handleError(error: error)
+                }
             }
         }
     }
@@ -65,14 +67,14 @@ extension FeedsViewModelImplementation {
             self.feeds = feeds
         }
         view?.hideLoader()
-        self.view?.reloadTable()
-        self.view?.displayNoResultsView(status: self.feeds.isEmpty)
+        view?.reloadTable()
+        view?.displayNoResultsView(status: self.feeds.isEmpty)
     }
     
     private func handleError(error: Error) {
         view?.hideLoader()
-        self.view?.displayNoResultsView(status: true)
-        self.view?.showAlert(title: AppConstants.errorTitle, message: error.localizedDescription)
+        view?.displayNoResultsView(status: true)
+        view?.showAlert(title: AppConstants.errorTitle, message: error.localizedDescription)
     }
     
 }
